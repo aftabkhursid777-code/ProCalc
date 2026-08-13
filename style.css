@@ -762,149 +762,171 @@ body.light-theme .history-result {
 
 }
 /* =========================================================
-   FINAL MOBILE FIX
-   Makes the calculator fit better on Android phones
+   FINAL ANDROID MOBILE LAYOUT
+   Compact layout so calculator + history fit better
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    /* Main calculator */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     .calculator {
         width: 100%;
         max-width: 100%;
-        min-height: 100vh;
-        box-sizing: border-box;
-
-        padding: 10px;
+        min-height: 0;
+        padding: 8px 10px 12px;
     }
 
 
-    /* Header */
+    /* ================= HEADER ================= */
+
     .header {
-        margin-bottom: 8px;
+        margin-bottom: 5px;
+        min-height: 60px;
     }
 
     .header h1 {
-        font-size: 34px;
+        font-size: 32px;
         margin: 0;
     }
 
     .header p {
-        font-size: 16px;
-        margin: 2px 0 0;
+        font-size: 15px;
+        margin: 0;
     }
 
-
-    /* Theme button */
     .theme-button {
-        width: 58px;
-        height: 58px;
-        font-size: 28px;
+        width: 52px;
+        height: 52px;
+        font-size: 25px;
     }
 
 
-    /* DEG / RAD */
+    /* ================= DEG / RAD ================= */
+
     .mode-buttons {
-        gap: 8px;
-        margin-bottom: 8px;
+        gap: 7px;
+        margin-bottom: 7px;
     }
 
     .mode-button {
-        height: 52px;
-        font-size: 20px;
+        height: 44px;
+        font-size: 18px;
+        border-radius: 16px;
     }
 
 
-    /* Display */
-    .display-container {
-        min-height: 145px;
-        height: 145px;
+    /* ================= DISPLAY ================= */
 
-        margin-bottom: 10px;
+    .display-container {
+        height: 105px;
+        min-height: 105px;
+        margin-bottom: 7px;
+        border-radius: 28px;
     }
 
     .display {
-        font-size: 42px;
+        font-size: 40px;
+    }
+
+    .expression-display {
+        font-size: 14px;
+    }
+
+    .answer-display {
+        font-size: 15px;
     }
 
 
-    /* Scientific buttons */
+    /* ================= SCIENTIFIC BUTTONS ================= */
+
     .scientific-buttons {
-        gap: 6px;
-        margin-bottom: 10px;
+        gap: 5px;
+        margin-bottom: 7px;
     }
 
     .scientific-buttons button {
-        height: 40px;
-        min-height: 40px;
-
-        font-size: 16px;
+        height: 34px;
+        min-height: 34px;
+        padding: 0;
+        font-size: 15px;
+        border-radius: 15px;
     }
 
 
-    /* Main keypad */
+    /* ================= MAIN KEYPAD ================= */
+
     .keypad {
-        gap: 6px;
+        gap: 5px;
     }
 
     .keypad button {
-        height: 58px;
-        min-height: 58px;
-
-        font-size: 24px;
-        border-radius: 18px;
+        height: 48px;
+        min-height: 48px;
+        padding: 0;
+        font-size: 21px;
+        border-radius: 16px;
     }
 
-
-    /* Ans button */
-    .ans-button {
-        height: 58px;
-        min-height: 58px;
-
-        font-size: 22px;
-    }
-
-
-    /* Operators */
     .operator-button {
-        font-size: 26px;
+        font-size: 23px;
     }
 
-
-    /* Equals */
     .equals-button {
-        font-size: 28px;
+        font-size: 24px;
     }
 
 
-    /* History */
+    /* ================= ANS BUTTON ================= */
+
+    .ans-button {
+        height: 48px;
+        min-height: 48px;
+        font-size: 19px;
+    }
+
+
+    /* ================= HISTORY ================= */
+
     .history-section {
-        margin-top: 12px;
-        padding-bottom: 20px;
+        margin-top: 8px;
+        padding-bottom: 8px;
     }
 
     .history-header {
-        margin-bottom: 6px;
+        margin-bottom: 4px;
     }
 
     .history-header h2 {
-        font-size: 22px;
+        font-size: 20px;
+        margin: 0;
     }
 
     .history-header button {
         font-size: 14px;
     }
 
-
-    /* History list */
     .history-list {
-        max-height: 180px;
+        max-height: 80px;
         overflow-y: auto;
     }
 
     .history-item {
-        padding: 8px 10px;
-        margin-bottom: 5px;
+        padding: 5px 8px;
+        margin-bottom: 3px;
+        font-size: 13px;
     }
 
+    .empty-history {
+        font-size: 13px;
+        padding: 5px;
+    }
 }
