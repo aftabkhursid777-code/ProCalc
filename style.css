@@ -761,219 +761,65 @@ body.light-theme .history-result {
     }
 
 }
-/* =========================================================
-   FINAL BALANCED ANDROID MOBILE LAYOUT
-========================================================= */
+/* =====================================================
+   HISTORY - COMPACT SCROLLABLE
+===================================================== */
 
-@media (max-width: 600px) {
+.history-section {
+    width: 100%;
+    margin-top: 3px;
+    padding: 0;
+    height: auto;
+    min-height: 0;
+}
 
-    * {
-        box-sizing: border-box;
-    }
+.history-header {
+    height: 23px;
+    min-height: 23px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    html,
-    body {
-        width: 100%;
-        min-height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
+.history-header h2 {
+    font-size: 17px;
+    line-height: 23px;
+    margin: 0;
+}
 
-    body {
-        display: block;
-    }
+.history-header button {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 4px;
+}
 
-    .calculator {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 5px 10px 4px;
-    }
+/* History entries use only the space they need */
+.history-list {
+    width: 100%;
+    height: auto;
+    max-height: 85px;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 1px 0 0 0;
+    padding: 0;
+}
 
+/* Individual history calculation */
+.history-item {
+    padding: 3px 6px;
+    margin: 0 0 2px 0;
+    min-height: 0;
+    font-size: 11px;
+    line-height: 14px;
+    border-radius: 8px;
+}
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .header {
-        height: 52px;
-        min-height: 52px;
-        margin: 0 0 3px 0;
-        padding: 0;
-    }
-
-    .header h1 {
-        font-size: 29px;
-        line-height: 30px;
-        margin: 0;
-    }
-
-    .header p {
-        font-size: 12px;
-        line-height: 14px;
-        margin: 0;
-    }
-
-    .theme-button {
-        width: 42px;
-        height: 42px;
-        min-width: 42px;
-        min-height: 42px;
-        font-size: 20px;
-    }
-
-
-    /* =====================================================
-       DEG / RAD
-    ===================================================== */
-
-    .mode-buttons {
-        width: 100%;
-        height: 36px;
-        min-height: 36px;
-        gap: 6px;
-        margin-bottom: 5px;
-    }
-
-    .mode-button {
-        height: 36px;
-        min-height: 36px;
-        padding: 0;
-        font-size: 15px;
-        border-radius: 12px;
-    }
-
-
-    /* =====================================================
-       DISPLAY
-    ===================================================== */
-
-    .display-container {
-        width: 100%;
-        height: 68px;
-        min-height: 68px;
-        margin-bottom: 5px;
-        padding: 4px 12px;
-        border-radius: 21px;
-    }
-
-    .display {
-        font-size: 30px;
-        line-height: 34px;
-    }
-
-    .expression-display {
-        font-size: 10px;
-        line-height: 12px;
-    }
-
-    .answer-display {
-        font-size: 11px;
-        line-height: 13px;
-    }
-
-
-    /* =====================================================
-       SCIENTIFIC BUTTONS
-    ===================================================== */
-
-    .scientific-buttons {
-        width: 100%;
-        gap: 3px;
-        margin-bottom: 5px;
-    }
-
-    .scientific-buttons button {
-        height: 24px;
-        min-height: 24px;
-        padding: 0;
-        font-size: 12px;
-        line-height: 24px;
-        border-radius: 10px;
-    }
-
-
-    /* =====================================================
-       MAIN KEYPAD
-    ===================================================== */
-
-    .keypad {
-        width: 100%;
-        gap: 3px;
-    }
-
-    .keypad button {
-        height: 39px;
-        min-height: 39px;
-        padding: 0;
-        font-size: 19px;
-        line-height: 39px;
-        border-radius: 12px;
-    }
-
-    .operator-button {
-        font-size: 20px;
-    }
-
-    .equals-button {
-        font-size: 21px;
-    }
-
-    .ans-button {
-        height: 39px;
-        min-height: 39px;
-        font-size: 17px;
-        line-height: 39px;
-    }
-
-
-    /* =====================================================
-       HISTORY
-    ===================================================== */
-
-    .history-section {
-        width: 100%;
-        margin-top: 4px;
-        padding: 0;
-    }
-
-    .history-header {
-        height: 23px;
-        min-height: 23px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .history-header h2 {
-        font-size: 17px;
-        line-height: 23px;
-        margin: 0;
-    }
-
-    .history-header button {
-        font-size: 12px;
-        line-height: 20px;
-        padding: 0 4px;
-    }
-
-    .history-list {
-        width: 100%;
-        max-height: 75px;
-        overflow-y: auto;
-        margin-top: 1px;
-    }
-
-    .history-item {
-        padding: 3px 6px;
-        margin-bottom: 2px;
-        font-size: 11px;
-        line-height: 14px;
-        border-radius: 8px;
-    }
-
-    .empty-history {
-        padding: 2px;
-        font-size: 11px;
-    }
+/* When there is no history */
+.empty-history {
+    padding: 2px;
+    margin: 0;
+    font-size: 11px;
 }
