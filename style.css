@@ -762,7 +762,7 @@ body.light-theme .history-result {
 
 }
 /* =========================================================
-   COMPACT ANDROID PHONE LAYOUT
+   EXTRA COMPACT ANDROID LAYOUT
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -777,11 +777,10 @@ body.light-theme .history-result {
         overflow-x: hidden;
     }
 
-    /* MAIN CONTAINER */
     .calculator {
         width: 100%;
         max-width: 100%;
-        padding: 5px 10px 5px;
+        padding: 3px 8px 3px;
         margin: 0;
     }
 
@@ -789,153 +788,153 @@ body.light-theme .history-result {
     /* ================= HEADER ================= */
 
     .header {
-        height: 62px;
-        min-height: 62px;
-        margin: 0 0 3px 0;
+        height: 52px;
+        min-height: 52px;
+        margin: 0 0 2px 0;
     }
 
     .header h1 {
-        font-size: 30px;
-        line-height: 32px;
+        font-size: 27px;
+        line-height: 28px;
         margin: 0;
     }
 
     .header p {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
         margin: 0;
     }
 
     .theme-button {
-        width: 48px;
-        height: 48px;
-        font-size: 23px;
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
     }
 
 
     /* ================= DEG / RAD ================= */
 
     .mode-buttons {
-        height: 42px;
-        gap: 6px;
-        margin-bottom: 5px;
+        height: 36px;
+        gap: 5px;
+        margin-bottom: 4px;
     }
 
     .mode-button {
-        height: 42px;
-        min-height: 42px;
-        font-size: 17px;
-        border-radius: 14px;
+        height: 36px;
+        min-height: 36px;
+        font-size: 15px;
+        border-radius: 12px;
     }
 
 
     /* ================= DISPLAY ================= */
 
     .display-container {
-        height: 88px;
-        min-height: 88px;
-        margin-bottom: 6px;
-        border-radius: 25px;
-        padding: 8px 18px;
+        height: 72px;
+        min-height: 72px;
+        margin-bottom: 5px;
+        border-radius: 21px;
+        padding: 5px 15px;
     }
 
     .display {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .expression-display {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .answer-display {
-        font-size: 13px;
+        font-size: 11px;
     }
 
 
     /* ================= SCIENTIFIC BUTTONS ================= */
 
     .scientific-buttons {
-        gap: 4px;
-        margin-bottom: 6px;
+        gap: 3px;
+        margin-bottom: 5px;
     }
 
     .scientific-buttons button {
-        height: 29px;
-        min-height: 29px;
+        height: 25px;
+        min-height: 25px;
         padding: 0;
-        font-size: 14px;
-        line-height: 29px;
-        border-radius: 13px;
+        font-size: 12px;
+        line-height: 25px;
+        border-radius: 11px;
     }
 
 
     /* ================= MAIN KEYPAD ================= */
 
     .keypad {
-        gap: 4px;
+        gap: 3px;
     }
 
     .keypad button {
-        height: 43px;
-        min-height: 43px;
+        height: 38px;
+        min-height: 38px;
         padding: 0;
-        font-size: 20px;
-        line-height: 43px;
-        border-radius: 14px;
+        font-size: 18px;
+        line-height: 38px;
+        border-radius: 12px;
     }
 
     .operator-button {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .equals-button {
-        font-size: 23px;
+        font-size: 21px;
     }
 
     .ans-button {
-        height: 43px;
-        min-height: 43px;
-        font-size: 18px;
-        line-height: 43px;
+        height: 38px;
+        min-height: 38px;
+        font-size: 16px;
+        line-height: 38px;
     }
 
 
     /* ================= HISTORY ================= */
 
     .history-section {
-        margin-top: 6px;
-        padding: 0 0 5px 0;
+        margin-top: 4px;
+        padding: 0 0 3px 0;
     }
 
     .history-header {
-        height: 25px;
-        margin-bottom: 2px;
+        height: 22px;
+        margin-bottom: 1px;
     }
 
     .history-header h2 {
-        font-size: 18px;
+        font-size: 16px;
         margin: 0;
     }
 
     .history-header button {
-        font-size: 13px;
-        padding: 2px 5px;
+        font-size: 12px;
+        padding: 1px 4px;
     }
 
     .history-list {
-        max-height: 60px;
+        max-height: 55px;
         overflow-y: auto;
     }
 
     .history-item {
-        padding: 3px 7px;
-        margin-bottom: 2px;
-        font-size: 12px;
-        line-height: 15px;
+        padding: 2px 6px;
+        margin-bottom: 1px;
+        font-size: 11px;
+        line-height: 13px;
     }
 
     .empty-history {
-        padding: 2px;
-        font-size: 12px;
+        padding: 1px;
+        font-size: 11px;
     }
 }
