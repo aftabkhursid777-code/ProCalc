@@ -1,0 +1,22 @@
+{
+  "name": "ProCalc - Scientific Calculator",
+  "short_name": "ProCalc",
+  "description": "A powerful and responsive scientific calculator.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1428",
+  "theme_color": "#0b1428",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-1924.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-5123.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
