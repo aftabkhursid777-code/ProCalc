@@ -888,53 +888,59 @@ body.light-theme .history-result {
         line-height: 62px;
     }
 
-    /* HISTORY */
-    .history-section {
-        margin-top: 8px;
-        padding: 5px 0 0;
-    }
+    /* ================= HISTORY - FIXED BOTTOM ================= */
 
-    .history-header {
-        height: 28px;
-        margin-bottom: 4px;
-    }
+.history-section {
+    margin-top: 8px;
+    padding: 5px 0 0;
+}
 
-    .history-header h2 {
-        font-size: 19px;
-        margin: 0;
-    }
+.history-header {
+    height: 28px;
+    margin-bottom: 4px;
+}
 
-    .history-header button {
-        font-size: 14px;
-        padding: 2px 5px;
-    }
+.history-header h2 {
+    font-size: 19px;
+    margin: 0;
+}
 
-    /* Keep history scrollable */
-    .history-list {
-        max-height: 90px;
-        overflow-y: auto;
-        gap: 5px;
-    }
+.history-header button {
+    font-size: 14px;
+    padding: 2px 5px;
+}
 
-    .history-item {
-        padding: 7px 10px;
-        margin-bottom: 0;
-        font-size: 13px;
-        line-height: 16px;
-        border-radius: 10px;
-    }
+/* Show at least 2 history records */
+.history-list {
+    height: 105px;
+    max-height: 105px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
-    .history-expression {
-        font-size: 13px;
-    }
+/* Each history record */
+.history-item {
+    flex: 0 0 50px;
+    height: 50px;
+    padding: 6px 10px;
+    margin: 0;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 16px;
+}
 
-    .history-result {
-        font-size: 17px;
-        margin-top: 2px;
-    }
+.history-expression {
+    font-size: 13px;
+}
 
-    .empty-history {
-        padding: 5px;
-        font-size: 12px;
-    }
+.history-result {
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.empty-history {
+    padding: 5px;
+    font-size: 12px;
 }
