@@ -762,56 +762,53 @@ body.light-theme .history-result {
 
 }
 /* =========================================================
-   FULL-SCREEN MOBILE CALCULATOR
+   COMPACT ANDROID PHONE LAYOUT
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+    * {
+        box-sizing: border-box;
     }
 
     body {
-        padding: 5px;
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 
+    /* MAIN CONTAINER */
     .calculator {
         width: 100%;
-        height: 100%;
-        max-width: none;
-
-        display: flex;
-        flex-direction: column;
-
-        overflow: hidden;
+        max-width: 100%;
+        padding: 5px 10px 5px;
+        margin: 0;
     }
 
 
     /* ================= HEADER ================= */
 
     .header {
-        flex: 0 0 auto;
-        margin-bottom: 5px;
+        height: 62px;
+        min-height: 62px;
+        margin: 0 0 3px 0;
     }
 
     .header h1 {
-        font-size: 26px;
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0;
     }
 
     .header p {
-        font-size: 13px;
-        margin-top: 2px;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
     }
 
     .theme-button {
-        width: 43px;
-        height: 43px;
+        width: 48px;
+        height: 48px;
         font-size: 23px;
     }
 
@@ -819,45 +816,38 @@ body.light-theme .history-result {
     /* ================= DEG / RAD ================= */
 
     .mode-buttons {
-        flex: 0 0 auto;
+        height: 42px;
         gap: 6px;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
     }
 
     .mode-button {
-        height: 40px;
-        border-radius: 13px;
-        font-size: 16px;
+        height: 42px;
+        min-height: 42px;
+        font-size: 17px;
+        border-radius: 14px;
     }
 
 
     /* ================= DISPLAY ================= */
 
     .display-container {
-        flex: 0 0 auto;
-
-        min-height: 0;
-        height: 100px;
-
-        padding: 10px 15px;
-
-        margin-bottom: 7px;
-
-        border-radius: 22px;
-    }
-
-    .expression-display {
-        min-height: 17px;
-        font-size: 13px;
+        height: 88px;
+        min-height: 88px;
+        margin-bottom: 6px;
+        border-radius: 25px;
+        padding: 8px 18px;
     }
 
     .display {
-        min-height: 38px;
         font-size: 34px;
     }
 
+    .expression-display {
+        font-size: 12px;
+    }
+
     .answer-display {
-        min-height: 17px;
         font-size: 13px;
     }
 
@@ -865,87 +855,87 @@ body.light-theme .history-result {
     /* ================= SCIENTIFIC BUTTONS ================= */
 
     .scientific-buttons {
-        flex: 0 0 auto;
-
         gap: 4px;
-
-        margin-bottom: 7px;
+        margin-bottom: 6px;
     }
 
     .scientific-buttons button {
-        height: 32px;
-
+        height: 29px;
+        min-height: 29px;
+        padding: 0;
+        font-size: 14px;
+        line-height: 29px;
         border-radius: 13px;
-
-        font-size: 13px;
     }
 
 
     /* ================= MAIN KEYPAD ================= */
 
     .keypad {
-        flex: 0 0 auto;
-
-        gap: 5px;
+        gap: 4px;
     }
 
     .keypad button {
-        height: 47px;
+        height: 43px;
+        min-height: 43px;
+        padding: 0;
+        font-size: 20px;
+        line-height: 43px;
+        border-radius: 14px;
+    }
 
-        border-radius: 18px;
-
+    .operator-button {
         font-size: 21px;
+    }
+
+    .equals-button {
+        font-size: 23px;
+    }
+
+    .ans-button {
+        height: 43px;
+        min-height: 43px;
+        font-size: 18px;
+        line-height: 43px;
     }
 
 
     /* ================= HISTORY ================= */
 
     .history-section {
-        flex: 1 1 auto;
-
-        min-height: 0;
-
-        margin-top: 7px;
-
-        padding-top: 6px;
-
-        overflow: hidden;
+        margin-top: 6px;
+        padding: 0 0 5px 0;
     }
 
     .history-header {
-        margin-bottom: 3px;
+        height: 25px;
+        margin-bottom: 2px;
     }
 
     .history-header h2 {
-        font-size: 19px;
+        font-size: 18px;
+        margin: 0;
     }
 
     .history-header button {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 2px 5px;
     }
 
     .history-list {
-        max-height: none;
-
+        max-height: 60px;
         overflow-y: auto;
     }
 
     .history-item {
-        padding: 6px 10px;
-
-        border-radius: 10px;
-    }
-
-    .history-expression {
-        font-size: 13px;
-    }
-
-    .history-result {
-        font-size: 17px;
+        padding: 3px 7px;
+        margin-bottom: 2px;
+        font-size: 12px;
+        line-height: 15px;
     }
 
     .empty-history {
-        padding: 7px;
-        font-size: 13px;
+        padding: 2px;
+        font-size: 12px;
     }
 }
