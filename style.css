@@ -1,0 +1,951 @@
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    min-height: 100vh;
+
+    background: #0b1428;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   CALCULATOR
+========================================================= */
+
+.calculator {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.header h1 {
+    font-size: 38px;
+
+    font-weight: 700;
+}
+
+
+.header p {
+    color: #a9b5c9;
+
+    font-size: 19px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   THEME BUTTON
+========================================================= */
+
+.theme-button {
+    width: 68px;
+
+    height: 68px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2c3b56;
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.theme-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   DEG / RAD BUTTONS
+========================================================= */
+
+.mode-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.mode-button {
+    width: 135px;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: #202d44;
+
+    color: #9daabe;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.mode-button.active {
+    background: #2868ed;
+
+    color: white;
+}
+
+
+/* =========================================================
+   DISPLAY
+========================================================= */
+
+.display-container {
+    width: 100%;
+
+    min-height: 165px;
+
+    background: #020714;
+
+    border-radius: 35px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* Small expression above main display */
+
+.expression-display {
+    width: 100%;
+
+    min-height: 25px;
+
+    text-align: right;
+
+    color: #707d94;
+
+    font-size: 19px;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+}
+
+
+/* Main display */
+
+.display {
+    width: 100%;
+
+    min-height: 55px;
+
+    text-align: right;
+
+    color: white;
+
+    font-size: clamp(32px, 7vw, 55px);
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+
+.display::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Result preview */
+
+.answer-display {
+    width: 100%;
+
+    min-height: 25px;
+
+    text-align: right;
+
+    color: #707d94;
+
+    font-size: 19px;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   SCIENTIFIC BUTTONS
+========================================================= */
+
+.scientific-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+}
+
+
+.scientific-buttons button {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #1d2a42;
+
+    color: #d0d7e2;
+
+    font-size: clamp(15px, 3vw, 21px);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.12s;
+}
+
+
+.scientific-buttons button:hover {
+    background: #293852;
+}
+
+
+.scientific-buttons button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   MAIN KEYPAD
+========================================================= */
+
+.keypad {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   NORMAL BUTTONS
+========================================================= */
+
+.keypad button {
+    width: 100%;
+
+    height: 66px;
+
+    border: none;
+
+    border-radius: 28px;
+
+    background: #35465f;
+
+    color: white;
+
+    font-size: clamp(22px, 5vw, 30px);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.12s;
+}
+
+
+.keypad button:hover {
+    filter: brightness(1.12);
+}
+
+
+.keypad button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   AC BUTTON
+========================================================= */
+
+.clear-button {
+    background: #f21f2b !important;
+
+    color: white;
+}
+
+
+/* =========================================================
+   OPERATOR BUTTONS
+========================================================= */
+
+.operator-button {
+    background: #2869ed !important;
+
+    color: white;
+}
+
+
+/* =========================================================
+   EQUAL BUTTON
+========================================================= */
+
+.equals-button {
+    background: #18a64b !important;
+
+    color: white;
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.history-section {
+    margin-top: 22px;
+
+    padding-top: 15px;
+
+    border-top: 2px solid #1d293d;
+}
+
+
+.history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.history-header h2 {
+    font-size: 28px;
+}
+
+
+.history-header button {
+    border: none;
+
+    background: transparent;
+
+    color: #6ea0ff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.history-header button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HISTORY LIST
+========================================================= */
+
+.history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+}
+
+
+/* Individual history item */
+
+.history-item {
+    background: #111d31;
+
+    border-radius: 15px;
+
+    padding: 12px 15px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.history-item:hover {
+    background: #1b2b45;
+}
+
+
+/* History expression */
+
+.history-expression {
+    text-align: right;
+
+    color: #8997ad;
+
+    font-size: 18px;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+}
+
+
+/* History result */
+
+.history-result {
+    text-align: right;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    margin-top: 3px;
+}
+
+
+/* Empty history */
+
+.empty-history {
+    text-align: center;
+
+    color: #6f7c91;
+
+    padding: 20px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+body.light-theme {
+    background: #eef2f7;
+
+    color: #182235;
+}
+
+
+body.light-theme .header p {
+    color: #647087;
+}
+
+
+body.light-theme .display-container {
+    background: white;
+}
+
+
+body.light-theme .display {
+    color: #172033;
+}
+
+
+body.light-theme .scientific-buttons button {
+    background: #dce3ee;
+
+    color: #172033;
+}
+
+
+body.light-theme .keypad button {
+    background: #cbd5e3;
+
+    color: #172033;
+}
+
+
+body.light-theme .operator-button {
+    background: #2869ed !important;
+
+    color: white !important;
+}
+
+
+body.light-theme .clear-button {
+    background: #f21f2b !important;
+
+    color: white !important;
+}
+
+
+body.light-theme .equals-button {
+    background: #18a64b !important;
+
+    color: white !important;
+}
+
+
+body.light-theme .history-section {
+    border-color: #d2d9e3;
+}
+
+
+body.light-theme .history-item {
+    background: white;
+}
+
+
+body.light-theme .history-result {
+    color: #182235;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .calculator {
+        width: 100%;
+    }
+
+
+    /* Header */
+
+    .header {
+        margin-bottom: 14px;
+    }
+
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+
+    .header p {
+        font-size: 16px;
+    }
+
+
+    .theme-button {
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 27px;
+    }
+
+
+    /* DEG / RAD */
+
+    .mode-buttons {
+        gap: 8px;
+    }
+
+
+    .mode-button {
+        width: auto;
+
+        flex: 1;
+
+        height: 50px;
+
+        font-size: 18px;
+
+        border-radius: 15px;
+    }
+
+
+    /* Display */
+
+    .display-container {
+        min-height: 135px;
+
+        padding: 17px;
+
+        border-radius: 28px;
+    }
+
+
+    .expression-display {
+        font-size: 16px;
+    }
+
+
+    .display {
+        font-size: clamp(30px, 9vw, 46px);
+    }
+
+
+    .answer-display {
+        font-size: 16px;
+    }
+
+
+    /* Scientific */
+
+    .scientific-buttons {
+        gap: 6px;
+    }
+
+
+    .scientific-buttons button {
+        height: 43px;
+
+        border-radius: 18px;
+
+        font-size: 15px;
+    }
+
+
+    /* Keypad */
+
+    .keypad {
+        gap: 7px;
+    }
+
+
+    .keypad button {
+        height: 60px;
+
+        border-radius: 23px;
+
+        font-size: 24px;
+    }
+
+
+    /* History */
+
+    .history-header h2 {
+        font-size: 24px;
+    }
+
+
+    .history-header button {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 7px;
+    }
+
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+
+    .header p {
+        font-size: 14px;
+    }
+
+
+    .theme-button {
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 23px;
+    }
+
+
+    .scientific-buttons button {
+        height: 39px;
+
+        font-size: 13px;
+
+        border-radius: 16px;
+    }
+
+
+    .keypad {
+        gap: 6px;
+    }
+
+
+    .keypad button {
+        height: 54px;
+
+        border-radius: 20px;
+
+        font-size: 21px;
+    }
+
+}
+/* =========================================================
+   FULL-SCREEN MOBILE CALCULATOR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        padding: 5px;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .calculator {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+        flex: 0 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .header p {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
+    .theme-button {
+        width: 43px;
+        height: 43px;
+        font-size: 23px;
+    }
+
+
+    /* ================= DEG / RAD ================= */
+
+    .mode-buttons {
+        flex: 0 0 auto;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .mode-button {
+        height: 40px;
+        border-radius: 13px;
+        font-size: 16px;
+    }
+
+
+    /* ================= DISPLAY ================= */
+
+    .display-container {
+        flex: 0 0 auto;
+
+        min-height: 0;
+        height: 100px;
+
+        padding: 10px 15px;
+
+        margin-bottom: 7px;
+
+        border-radius: 22px;
+    }
+
+    .expression-display {
+        min-height: 17px;
+        font-size: 13px;
+    }
+
+    .display {
+        min-height: 38px;
+        font-size: 34px;
+    }
+
+    .answer-display {
+        min-height: 17px;
+        font-size: 13px;
+    }
+
+
+    /* ================= SCIENTIFIC BUTTONS ================= */
+
+    .scientific-buttons {
+        flex: 0 0 auto;
+
+        gap: 4px;
+
+        margin-bottom: 7px;
+    }
+
+    .scientific-buttons button {
+        height: 32px;
+
+        border-radius: 13px;
+
+        font-size: 13px;
+    }
+
+
+    /* ================= MAIN KEYPAD ================= */
+
+    .keypad {
+        flex: 0 0 auto;
+
+        gap: 5px;
+    }
+
+    .keypad button {
+        height: 47px;
+
+        border-radius: 18px;
+
+        font-size: 21px;
+    }
+
+
+    /* ================= HISTORY ================= */
+
+    .history-section {
+        flex: 1 1 auto;
+
+        min-height: 0;
+
+        margin-top: 7px;
+
+        padding-top: 6px;
+
+        overflow: hidden;
+    }
+
+    .history-header {
+        margin-bottom: 3px;
+    }
+
+    .history-header h2 {
+        font-size: 19px;
+    }
+
+    .history-header button {
+        font-size: 14px;
+    }
+
+    .history-list {
+        max-height: none;
+
+        overflow-y: auto;
+    }
+
+    .history-item {
+        padding: 6px 10px;
+
+        border-radius: 10px;
+    }
+
+    .history-expression {
+        font-size: 13px;
+    }
+
+    .history-result {
+        font-size: 17px;
+    }
+
+    .empty-history {
+        padding: 7px;
+        font-size: 13px;
+    }
+}

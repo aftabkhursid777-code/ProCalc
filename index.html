@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ProCalc - Scientific Calculator</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="header">
+
+            <div>
+                <h1>ProCalc</h1>
+                <p>Scientific Calculator</p>
+            </div>
+
+            <button id="themeButton"
+                    class="theme-button">
+                ☼
+            </button>
+
+        </div>
+
+
+        <!-- ================= DEG / RAD ================= -->
+
+        <div class="mode-buttons">
+
+            <button id="degButton"
+                    class="mode-button active">
+                DEG
+            </button>
+
+            <button id="radButton"
+                    class="mode-button">
+                RAD
+            </button>
+
+        </div>
+
+
+        <!-- ================= DISPLAY ================= -->
+
+        <div class="display-container">
+
+            <div id="expressionDisplay"
+                 class="expression-display">
+            </div>
+
+            <div id="display"
+                 class="display">
+                0
+            </div>
+
+            <div id="answerDisplay"
+                 class="answer-display">
+            </div>
+
+        </div>
+
+
+        <!-- ================= SCIENTIFIC BUTTONS ================= -->
+
+        <div class="scientific-buttons">
+
+            <button data-value="sin(">sin</button>
+            <button data-value="cos(">cos</button>
+            <button data-value="tan(">tan</button>
+
+            <button data-value="asin(">sin⁻¹</button>
+            <button data-value="acos(">cos⁻¹</button>
+            <button data-value="atan(">tan⁻¹</button>
+
+            <button data-value="log(">log</button>
+            <button data-value="ln(">ln</button>
+            <button data-value="sqrt(">√</button>
+
+            <button data-value="10^">10ˣ</button>
+            <button data-value="e^">eˣ</button>
+            <button data-value="1/(">1/x</button>
+
+            <button data-value="^2">x²</button>
+            <button data-value="^">xʸ</button>
+            <button data-value="!">x!</button>
+
+            <button data-value="π">π</button>
+            <button data-value="e">e</button>
+            <button data-value="%">%</button>
+
+        </div>
+
+
+        <!-- ================= MAIN KEYPAD ================= -->
+
+        <div class="keypad">
+
+            <!-- Row 1 -->
+
+            <button id="clearButton"
+                    class="clear-button">
+                AC
+            </button>
+
+            <button id="backspaceButton">
+                ⌫
+            </button>
+
+            <button id="parenthesisButton">
+                ( )
+            </button>
+
+            <button class="operator-button"
+                    data-value="/">
+                ÷
+            </button>
+
+
+            <!-- Row 2 -->
+
+            <button data-value="7">
+                7
+            </button>
+
+            <button data-value="8">
+                8
+            </button>
+
+            <button data-value="9">
+                9
+            </button>
+
+            <button class="operator-button"
+                    data-value="*">
+                ×
+            </button>
+
+
+            <!-- Row 3 -->
+
+            <button data-value="4">
+                4
+            </button>
+
+            <button data-value="5">
+                5
+            </button>
+
+            <button data-value="6">
+                6
+            </button>
+
+            <button class="operator-button"
+                    data-value="-">
+                −
+            </button>
+
+
+            <!-- Row 4 -->
+
+            <button data-value="1">
+                1
+            </button>
+
+            <button data-value="2">
+                2
+            </button>
+
+            <button data-value="3">
+                3
+            </button>
+
+            <button class="operator-button"
+                    data-value="+">
+                +
+            </button>
+
+
+            <!-- Row 5 -->
+
+            <!-- ± HAS BEEN REPLACED WITH ANS -->
+
+            <button id="ansButton"
+                    class="ans-button">
+                Ans
+            </button>
+
+            <button data-value="0">
+                0
+            </button>
+
+            <button data-value=".">
+                .
+            </button>
+
+            <button id="equalsButton"
+                    class="equals-button">
+                =
+            </button>
+
+        </div>
+
+
+        <!-- ================= HISTORY ================= -->
+
+        <div class="history-section">
+
+            <div class="history-header">
+
+                <h2>
+                    History
+                </h2>
+
+                <button id="clearHistoryButton">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div id="historyList"
+                 class="history-list">
+
+                <div class="empty-history">
+                    No calculations yet
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
