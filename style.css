@@ -761,3 +761,191 @@ body.light-theme .history-result {
     }
 
 }
+/* =========================================================
+   FULL-SCREEN MOBILE CALCULATOR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        padding: 5px;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .calculator {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+        flex: 0 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .header p {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
+    .theme-button {
+        width: 43px;
+        height: 43px;
+        font-size: 23px;
+    }
+
+
+    /* ================= DEG / RAD ================= */
+
+    .mode-buttons {
+        flex: 0 0 auto;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .mode-button {
+        height: 40px;
+        border-radius: 13px;
+        font-size: 16px;
+    }
+
+
+    /* ================= DISPLAY ================= */
+
+    .display-container {
+        flex: 0 0 auto;
+
+        min-height: 0;
+        height: 100px;
+
+        padding: 10px 15px;
+
+        margin-bottom: 7px;
+
+        border-radius: 22px;
+    }
+
+    .expression-display {
+        min-height: 17px;
+        font-size: 13px;
+    }
+
+    .display {
+        min-height: 38px;
+        font-size: 34px;
+    }
+
+    .answer-display {
+        min-height: 17px;
+        font-size: 13px;
+    }
+
+
+    /* ================= SCIENTIFIC BUTTONS ================= */
+
+    .scientific-buttons {
+        flex: 0 0 auto;
+
+        gap: 4px;
+
+        margin-bottom: 7px;
+    }
+
+    .scientific-buttons button {
+        height: 32px;
+
+        border-radius: 13px;
+
+        font-size: 13px;
+    }
+
+
+    /* ================= MAIN KEYPAD ================= */
+
+    .keypad {
+        flex: 0 0 auto;
+
+        gap: 5px;
+    }
+
+    .keypad button {
+        height: 47px;
+
+        border-radius: 18px;
+
+        font-size: 21px;
+    }
+
+
+    /* ================= HISTORY ================= */
+
+    .history-section {
+        flex: 1 1 auto;
+
+        min-height: 0;
+
+        margin-top: 7px;
+
+        padding-top: 6px;
+
+        overflow: hidden;
+    }
+
+    .history-header {
+        margin-bottom: 3px;
+    }
+
+    .history-header h2 {
+        font-size: 19px;
+    }
+
+    .history-header button {
+        font-size: 14px;
+    }
+
+    .history-list {
+        max-height: none;
+
+        overflow-y: auto;
+    }
+
+    .history-item {
+        padding: 6px 10px;
+
+        border-radius: 10px;
+    }
+
+    .history-expression {
+        font-size: 13px;
+    }
+
+    .history-result {
+        font-size: 17px;
+    }
+
+    .empty-history {
+        padding: 7px;
+        font-size: 13px;
+    }
+}
